@@ -1,4 +1,5 @@
 # Result_Management
+DEPLOY LINK - https://6543d6e5c8cb3a23afd7b591--lovely-cascaron-a540c9.netlify.app/
 Before you run the project, make sure to follow these steps:
 
 In the project directory, navigate to the server and client directories and run npm install in each of them. This will install the required Node.js modules for both the server and client sides.
