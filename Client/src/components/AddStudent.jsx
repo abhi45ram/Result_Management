@@ -9,14 +9,14 @@ const AddRemoveStudent = () => {
   const toast = useToast();
 
   useEffect(()=>{
-    axios.get('http://localhost:5000/student/unassignedStudents').then((res)=>
+    axios.get('https://result-manage.onrender.com/student/unassignedStudents').then((res)=>
     setMyData(res.data));
   },[]);
 
   const  assignStudent = async (email, uid) => {
     console.log(email,uid);
     email="viveks@gmail.com";
-   await axios.post('http://localhost:5000/teacher/assignStudent', { email, uid })
+   await axios.post('https://result-manage.onrender.com/teacher/assignStudent', { email, uid })
       .then(res => {
         console.log(res.data);
         toast({

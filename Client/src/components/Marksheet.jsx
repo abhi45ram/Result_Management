@@ -11,7 +11,7 @@ const Marksheet = () => {
   const [myData,setMyData]=useState();
 
   useEffect(()=>{
-    axios.get('http://localhost:5000/student/allstudents').then((res)=>
+    axios.get('https://result-manage.onrender.com/student/allstudents').then((res)=>
    setMyData(res.data))
   
   },[]);

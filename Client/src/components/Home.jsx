@@ -38,7 +38,7 @@ const toast = useToast();
 
   const fetchAssignedStudents = async (email) => {
     try {
-      const response = await axios.post('http://localhost:5000/teacher/assignedStudents', { email });
+      const response = await axios.post('https://result-manage.onrender.com/teacher/assignedStudents', { email });
       setAssignedStudents(response.data);
     } catch (error) {
       console.log(error);
@@ -49,7 +49,7 @@ const toast = useToast();
     try {
       console.log(email, uid);
       email = "viveks@gmail.com";
-      const response = await axios.post('http://localhost:5000/teacher/removeStudent', { email, uid });
+      const response = await axios.post('https://result-manage.onrender.com/teacher/removeStudent', { email, uid });
       console.log(response.data);
       // Show success toast
       toast({

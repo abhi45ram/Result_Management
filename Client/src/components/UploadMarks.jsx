@@ -27,7 +27,7 @@ const UploadMarks = () => {
 
   const fetchAssignedStudents = async (email) => {
     try {
-      const response = await axios.post('http://localhost:5000/teacher/unevaluatedStudents', { email });
+      const response = await axios.post('https://result-manage.onrender.com/teacher/unevaluatedStudents', { email });
       setAssignedStudents(response.data);
       if (response.data.length > 0) {
         setSelectedUid(response.data[0].uid);
@@ -56,7 +56,7 @@ const UploadMarks = () => {
     console.log(selectedUid);
     try {
       const { Ideation, Execution,Theory,Viva } = marks;
-      const response = await axios.post('http://localhost:5000/teacher/evaluateStudent', {
+      const response = await axios.post('https://result-manage.onrender.com/teacher/evaluateStudent', {
         email: "viveks@gmail.com",
         uid: selectedUid,
         ideation: Ideation,
@@ -85,7 +85,7 @@ const UploadMarks = () => {
     console.log(selectedUid);
     try {
       const { Ideation, Execution,Theory,Viva } = marks;
-      const response = await axios.post('http://localhost:5000/teacher/evaluateStudent', {
+      const response = await axios.post('https://result-manage.onrender.com/teacher/evaluateStudent', {
         email: "viveks@gmail.com",
         uid: selectedUid,
         ideation: Ideation,
@@ -111,7 +111,7 @@ const UploadMarks = () => {
 
     try {
       const { Ideation, Execution,Theory,Viva } = marks;
-      const response = await axios.post('http://localhost:5000/student/lockStudent', {
+      const response = await axios.post('https://result-manage.onrender.com/student/lockStudent', {
         uid: selectedUid
       });
       console.log(response.data);
